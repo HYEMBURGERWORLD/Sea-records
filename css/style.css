@@ -1,0 +1,112 @@
+/*******************/
+/* header */
+/*******************/
+.header {
+}
+
+/*******************/
+/* nav */
+/*******************/
+.main-nav {
+  background-color: aliceblue;
+  padding: 1.2rem 0;
+}
+
+.main-nav-list {
+  justify-content: end;
+  gap: 0.8em;
+}
+
+.main-nav-info {
+  font-size: 1.4rem;
+}
+
+/*******************/
+/* 메인 문구 */
+/*******************/
+.section-stc {
+  background-color: #91a7ff;
+  padding: 12.8rem 6.4rem;
+  font-size: 5.2rem;
+  font-weight: 700;
+  letter-spacing: -0.4rem;
+  color: #333;
+}
+
+/*******************/
+/* 태그 */
+/*******************/
+.tags {
+  background-color: black;
+
+  max-width: 50%;
+  margin: 0 auto;
+  padding: 4.8rem 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.tag {
+  font-size: 1.4rem;
+  font-weight: 800;
+
+  background-color: #edf2ff;
+  padding: 0.4rem 1.6rem;
+  border-radius: 10px;
+
+  cursor: pointer;
+}
+
+/*******************/
+/* 기록 입력 폼 */
+/*******************/
+.record-form {
+  background-color: #fff;
+  max-width: 50%;
+  margin: 0 auto;
+  row-gap: 0.4rem;
+  padding-top: 1.2rem;
+}
+
+.record-form .btn {
+  width: 100%;
+}
+
+/*******************/
+/* 기록 출력 카드 뭉치 */
+/*******************/
+.record-container {
+  max-width: 80%;
+  margin: 0 auto;
+  background-color: black;
+  padding: 3.2rem;
+  gap: 2.4rem;
+}
+
+.record-card {
+  background-color: #fff;
+  padding: 4rem 3.2rem;
+  font-size: 2.4rem;
+  gap: 1.2rem;
+}
+
+.card-tag {
+  width: 30%;
+  text-align: center;
+}
+
+.card-date {
+  font-size: 1.4rem;
+}
+
+.card-title-author {
+  font-size: 1.6rem;
+}
+
+.card-title {
+  font-style: italic;
+}

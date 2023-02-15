@@ -1,0 +1,96 @@
+/*
+폰트 사이즈
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+여백 (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+color
+#364fc7
+
+*/
+
+/***************************/
+/* 초기화, 전체 적용 */
+/***************************/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Nanum Myeongjo", serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+}
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  /* padding: 0 3.2rem; */
+
+  background-color: #edf2ff;
+}
+
+.btn {
+  background-color: #364fc7;
+  color: #fff;
+
+  padding: 1.2rem 0;
+  border: none;
+
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.flex--cols {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+button,
+input::placeholder,
+textarea::placeholder {
+  font-family: "Nanum Myeongjo", serif;
+}
+
+input,
+textarea {
+  padding: 0.8rem;
+  border: none;
+  display: block;
+  width: 100%;
+}
+
+textarea {
+  resize: none;
+}
+
+ul {
+  list-style: none;
+}

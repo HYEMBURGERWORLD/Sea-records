@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/default.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>기록의 바다에 오신 걸 환영합니다.</title>
+  </head>
+  <body>
+    <header class="header">
+      <!-- 간단한 회원정보, 로그아웃 -->
+      <nav class="main-nav">
+        <ul class="main-nav-list container flex">
+          <li class="main-nav-info">
+            <span><strong>사용자</strong>님, 반가워요!</span>
+          </li>
+          <li class="main-nav-info"><button id="logout">로그아웃</button></li>
+        </ul>
+      </nav>
+
+      <!-- 헤더 메인 -->
+      <section class="header-main-section">
+        <div class="container">
+          <!-- 메인 문구 -->
+          <div class="section-stc">
+            <p class="main-sentence">기록의 바다에 닻을 내리다｡</p>
+          </div>
+          <!-- tag 모음 -->
+          <div class="tags">
+            <!--임시-->
+            <p class="tag">소설</p>
+            <p class="tag">영화</p>
+            <p class="tag">드라마</p>
+            <p class="tag">드라마</p>
+            <p class="tag">드라마</p>
+            <p class="tag">드라마</p>
+            <p class="tag">드라마</p>
+            <p class="tag">드라마</p>
+            <p class="tag">드라마</p>
+            <p class="tag">드라마</p>
+            <p class="tag">드라마</p>
+            <p class="tag">드라마</p>
+            <p class="tag">드라마</p>
+          </div>
+
+          <!-- 입력 form 숨긴 상태 -->
+          <p>닻을 내리시겠습니까? &darr;</p>
+
+          <!-- 입력 form -->
+          <form class="record-form">
+            <div class="record-title-box">
+              <div class="title-box">
+                <label for="title">제목</label>
+                <input
+                  type="text"
+                  class="record-title"
+                  id="title"
+                  placeholder="얼음 고래"
+                />
+              </div>
+
+              <div class="author-box">
+                <label for="author">작가명</label>
+                <input
+                  type="text"
+                  class="record-author"
+                  id="author"
+                  placeholder="츠지무라 미즈키"
+                />
+              </div>
+            </div>
+
+            <label for="text">당신을 울린 문장은 무엇인가요 ...</label>
+            <textarea
+              class="record-text"
+              id="text"
+              cols="30"
+              rows="10"
+              placeholder="당신이 그려내는 빛은 어째서 그렇게 강하고 아름다운 것일까요?"
+            ></textarea>
+
+            <div class="tag-box">
+              <label for="recordTag">태그</label>
+              <input type="text" class="record-tag" id="recordTag" />
+            </div>
+
+            <button class="btn">닻을 내려 기록합니다</button>
+          </form>
+        </div>
+      </section>
+    </header>
+
+    <main class="container">
+      <ul class="record-container grid grid--3-cols">
+        <!--카드 시작-->
+        <li class="record-card flex--cols">
+          <!--임시-->
+          <p class="card-tag tag">tag</p>
+          <p class="card-date">2023. 02. 15</p>
+          <p class="card-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+            consectetur natus magni eos, veritatis facere at aliquam reiciendis
+            iste deserunt. Temporibus, totam? Sit, omnis rerum magni quia earum
+            inventore rem.
+          </p>
+          <div class="card-title-author">
+            <span class="card-title">&mdash; title,</span>
+            <span class="card-author">author</span>
+          </div>
+        </li>
+
+        <!--카드 시작-->
+        <li class="record-card flex--cols">
+          <!--임시-->
+          <p class="card-tag tag">tag</p>
+          <p class="card-date">2023. 02. 15</p>
+          <p class="card-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+            consectetur natus magni eos, veritatis facere at aliquam reiciendis
+            iste deserunt. Temporibus, totam? Sit, omnis rerum magni quia earum
+            inventore rem.
+          </p>
+          <div class="card-title-author">
+            <span class="card-title">&mdash; title,</span>
+            <span class="card-author">author</span>
+          </div>
+        </li>
+
+        <!--카드 시작-->
+        <li class="record-card flex--cols">
+          <!--임시-->
+          <p class="card-tag tag">tag</p>
+          <p class="card-date">2023. 02. 15</p>
+          <p class="card-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+            consectetur natus magni eos, veritatis facere at aliquam reiciendis
+            iste deserunt. Temporibus, totam? Sit, omnis rerum magni quia earum
+            inventore rem.
+          </p>
+          <div class="card-title-author">
+            <span class="card-title">&mdash; title,</span>
+            <span class="card-author">author</span>
+          </div>
+        </li>
+
+        <!--카드 시작-->
+        <li class="record-card flex--cols">
+          <!--임시-->
+          <p class="card-tag tag">tag</p>
+          <p class="card-date">2023. 02. 15</p>
+          <p class="card-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+            consectetur natus magni eos, veritatis facere at aliquam reiciendis
+            iste deserunt. Temporibus, totam? Sit, omnis rerum magni quia earum
+            inventore rem.
+          </p>
+          <div class="card-title-author">
+            <span class="card-title">&mdash; title,</span>
+            <span class="card-author">author</span>
+          </div>
+        </li>
+      </ul>
+    </main>
+
+    <footer></footer>
+  </body>
+</html>
