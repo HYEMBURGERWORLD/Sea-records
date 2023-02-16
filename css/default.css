@@ -5,8 +5,13 @@
 여백 (px)
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
 
-color
+bg color
 #364fc7
+#91a7ff
+
+font
+#0E1119
+#1D2133
 
 */
 
@@ -35,8 +40,6 @@ body {
   max-width: 120rem;
   margin: 0 auto;
   /* padding: 0 3.2rem; */
-
-  background-color: #edf2ff;
 }
 
 .btn {
@@ -60,17 +63,6 @@ body {
 
 .grid--3-cols {
   grid-template-columns: repeat(3, 1fr);
-}
-
-.flex {
-  display: flex;
-  align-items: center;
-}
-
-.flex--cols {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 button,

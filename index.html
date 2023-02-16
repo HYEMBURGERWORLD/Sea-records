@@ -18,9 +18,9 @@
     <header class="header">
       <!-- 간단한 회원정보, 로그아웃 -->
       <nav class="main-nav">
-        <ul class="main-nav-list container flex">
+        <ul class="main-nav-list container">
           <li class="main-nav-info">
-            <span><strong>사용자</strong>님, 반가워요!</span>
+            <p><span class="user-name">사용자</span>님, 반가워요!</p>
           </li>
           <li class="main-nav-info"><button id="logout">로그아웃</button></li>
         </ul>
@@ -52,7 +52,7 @@
           </div>
 
           <!-- 입력 form 숨긴 상태 -->
-          <p>닻을 내리시겠습니까? &darr;</p>
+          <!-- <p>닻을 내리시겠습니까? &darr;</p> -->
 
           <!-- 입력 form -->
           <form class="record-form">
@@ -77,19 +77,25 @@
                 />
               </div>
             </div>
-
-            <label for="text">당신을 울린 문장은 무엇인가요 ...</label>
-            <textarea
-              class="record-text"
-              id="text"
-              cols="30"
-              rows="10"
-              placeholder="당신이 그려내는 빛은 어째서 그렇게 강하고 아름다운 것일까요?"
-            ></textarea>
+            <div class="text-box">
+              <label for="text">당신을 울린 문장은 무엇인가요 ...</label>
+              <textarea
+                class="record-text"
+                id="text"
+                cols="30"
+                rows="10"
+                placeholder="당신이 그려내는 빛은 어째서 그렇게 강하고 아름다운 것일까요?"
+              ></textarea>
+            </div>
 
             <div class="tag-box">
               <label for="recordTag">태그</label>
-              <input type="text" class="record-tag" id="recordTag" />
+              <input
+                type="text"
+                class="record-tag"
+                id="recordTag"
+                placeholder="소설"
+              />
             </div>
 
             <button class="btn">닻을 내려 기록합니다</button>
@@ -101,7 +107,25 @@
     <main class="container">
       <ul class="record-container grid grid--3-cols">
         <!--카드 시작-->
-        <li class="record-card flex--cols">
+        <li class="record-card">
+          <!--임시-->
+          <p class="card-tag tag">tag</p>
+          <p class="card-date">2023. 02. 15</p>
+          <p class="card-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+            consectetur natus magni eos, veritatis facere at aliquam reiciendis
+            iste deserunt. Temporibus, totam? Sit, omnis rerum magni quia earum
+            inventore rem.
+          </p>
+          <div class="card-title-author">
+            <span class="card-title">&mdash; title,</span>
+            <span class="card-author">author</span>
+          </div>
+          <p class="copy">복사</p>
+        </li>
+
+        <!--카드 시작-->
+        <li class="record-card">
           <!--임시-->
           <p class="card-tag tag">tag</p>
           <p class="card-date">2023. 02. 15</p>
@@ -118,15 +142,13 @@
         </li>
 
         <!--카드 시작-->
-        <li class="record-card flex--cols">
+        <li class="record-card">
           <!--임시-->
           <p class="card-tag tag">tag</p>
           <p class="card-date">2023. 02. 15</p>
           <p class="card-text">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
-            consectetur natus magni eos, veritatis facere at aliquam reiciendis
-            iste deserunt. Temporibus, totam? Sit, omnis rerum magni quia earum
-            inventore rem.
+            consectetur natus magni eos
           </p>
           <div class="card-title-author">
             <span class="card-title">&mdash; title,</span>
@@ -135,15 +157,14 @@
         </li>
 
         <!--카드 시작-->
-        <li class="record-card flex--cols">
+        <li class="record-card">
           <!--임시-->
           <p class="card-tag tag">tag</p>
           <p class="card-date">2023. 02. 15</p>
           <p class="card-text">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
             consectetur natus magni eos, veritatis facere at aliquam reiciendis
-            iste deserunt. Temporibus, totam? Sit, omnis rerum magni quia earum
-            inventore rem.
+            iste deserunt.
           </p>
           <div class="card-title-author">
             <span class="card-title">&mdash; title,</span>
@@ -152,7 +173,38 @@
         </li>
 
         <!--카드 시작-->
-        <li class="record-card flex--cols">
+        <li class="record-card">
+          <!--임시-->
+          <p class="card-tag tag">tag</p>
+          <p class="card-date">2023. 02. 15</p>
+          <p class="card-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+            consectetur natus magni eos, veritatis facere at aliquam reiciendis
+            iste deserunt.
+          </p>
+          <div class="card-title-author">
+            <span class="card-title">&mdash; title,</span>
+            <span class="card-author">author</span>
+          </div>
+        </li>
+
+        <!--카드 시작-->
+        <li class="record-card">
+          <!--임시-->
+          <p class="card-tag tag">tag</p>
+          <p class="card-date">2023. 02. 15</p>
+          <p class="card-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+            consectetur natus magni eos
+          </p>
+          <div class="card-title-author">
+            <span class="card-title">&mdash; title,</span>
+            <span class="card-author">author</span>
+          </div>
+        </li>
+
+        <!--카드 시작-->
+        <li class="record-card">
           <!--임시-->
           <p class="card-tag tag">tag</p>
           <p class="card-date">2023. 02. 15</p>
@@ -166,6 +218,7 @@
             <span class="card-title">&mdash; title,</span>
             <span class="card-author">author</span>
           </div>
+          <p class="copy">복사</p>
         </li>
       </ul>
     </main>
