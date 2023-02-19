@@ -9,7 +9,7 @@
 /* nav */
 /*******************/
 .main-nav {
-  background-color: aliceblue;
+  /* background-color: aliceblue; */
   padding: 1.2rem 0;
 }
 
@@ -28,16 +28,35 @@
   font-weight: 800;
 }
 
+.btn--logout {
+  padding: 0.4rem 0.8rem;
+}
+
 /*******************/
 /* 메인 문구 */
 /*******************/
-.section-stc {
-  background-color: #91a7ff;
+.header-main-section {
   padding: 12.8rem 6.4rem;
+}
+
+.section-stc {
+  /* background-color: #91a7ff; */
+  position: relative;
+  margin: 3.2rem 0 9.6rem 0;
+}
+
+.main-sentence {
   font-size: 5.2rem;
-  font-weight: 700;
   letter-spacing: -0.4rem;
   color: #1d2133;
+  font-weight: 800;
+}
+
+.sub-sentence {
+  font-size: 3rem;
+  letter-spacing: -0.2rem;
+  margin-top: 0.8rem;
+  color: #1d2133; /*임시*/
 }
 
 /*******************/
@@ -57,7 +76,7 @@
 
 .tag {
   font-size: 1.4rem;
-  font-weight: 800;
+  font-weight: 700;
 
   background-color: #edf2ff;
   color: #1d2133;
@@ -71,25 +90,48 @@
 
 .tag:hover {
   background-color: #91a7ff;
+  font-weight: 800;
 }
 
 /*******************/
 /* 기록 입력 폼 */
 /*******************/
+.fold-msg-box {
+  text-align: center;
+  margin: 4.8rem 0;
+}
+
+.fold-msg {
+  font-size: 1.6rem;
+  font-weight: 800;
+  cursor: pointer;
+  background-color: #fff;
+
+  display: inline-block;
+  padding: 1.2rem 2.4rem;
+  border-radius: 20px;
+
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.section-record-form {
+  max-width: 50%;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 3.2rem 3.2rem;
+  margin: 4.8rem auto;
+  overflow: hidden;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
 .record-form {
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
-
-  background-color: #fff;
-  border-radius: 5px;
-  overflow: hidden;
-  max-width: 50%;
-  margin: 0 auto;
-  padding-top: 1.2rem;
 }
 
 .record-form .btn {
+  border-radius: 9px;
   width: 100%;
 }
 
@@ -98,16 +140,19 @@
 /*******************/
 .record-container {
   max-width: 80%;
-  margin: 0 auto;
-  background-color: #91a7ff;
+  margin: 6.4rem auto 12.8rem auto;
+  background-color: #364fc7;
+  border-radius: 5px;
+
   padding: 3.2rem;
   gap: 2.4rem;
+  box-shadow: rgba(0, 0, 0, 0.03) 0px 10px 50px;
 }
 
 .record-card {
   background-color: #fff;
   border-radius: 5px;
-  padding: 4rem 3.2rem;
+  padding: 3.2rem 3.2rem 8rem 3.2rem;
   font-size: 2.4rem;
   line-height: 1.1;
   gap: 1.2rem;
@@ -116,12 +161,15 @@
   flex-direction: column;
   justify-content: flex-start;
 
+  box-shadow: rgba(0, 0, 0, 0.2) 0px -50px 36px -40px inset;
+
   cursor: pointer;
-  transition: all 0.5s;
+  transition: all 0.8s;
 }
 
 .record-card:hover {
   transform: scale(1.03);
+  box-shadow: none;
 }
 
 .card-tag {
@@ -134,11 +182,19 @@
 }
 
 .card-title-author {
-  font-size: 1.6rem;
+  text-align: end;
+  font-size: 1.4rem;
 }
 
 .card-title {
+  font-weight: 700;
   font-style: italic;
+}
+
+.card-text {
+  font-size: 2.4rem;
+  letter-spacing: -0.05rem;
+  padding: 1.6rem 0;
 }
 
 .copy {
@@ -150,4 +206,111 @@
 
 .copy:hover {
   color: #333;
+}
+
+/*******************/
+/* animation */
+/*******************/
+.wave-container {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: -100;
+
+  box-shadow: inset 0 0 0 6px #4b43a6;
+}
+
+.wave {
+  width: 110%;
+  height: 110%;
+  border-radius: 42%;
+
+  position: absolute;
+  opacity: 0.5;
+}
+
+.wave--1 {
+  animation: wave 3s infinite linear;
+  background-color: #4c6ef5;
+
+  top: -15%;
+  left: -5%;
+}
+.wave--2 {
+  animation: wave 4s infinite linear;
+  background-color: #748ffc;
+
+  top: -20%;
+  left: -5%;
+}
+.wave--3 {
+  animation: wave 5s infinite linear;
+  background-color: #91a7ff;
+
+  top: -25%;
+  left: -5%;
+}
+.wave--4 {
+  animation: wave 6s infinite linear;
+  background-color: #bac8ff;
+
+  top: -30%;
+  left: -5%;
+}
+.wave--5 {
+  animation: wave 8s infinite linear;
+  background-color: #dbe4ff;
+
+  top: -40%;
+  left: -5%;
+}
+
+.wave--6 {
+  animation: wave 8s infinite linear;
+  background-color: #edf2ff;
+
+  opacity: 1;
+
+  top: -45%;
+  left: -5%;
+}
+
+.sun {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: #fff 0 0 18px 0;
+
+  position: absolute;
+  left: 50%;
+  top: 15%;
+  transform: translate(-50%, 0);
+  z-index: 1;
+
+  animation: sun 6s infinite ease-in;
+}
+
+.btn--record:hover {
+  animation: ;
+}
+
+@keyframes wave {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes sun {
+  100% {
+    width: 4.2rem;
+    height: 4.2rem;
+  }
+}
+
+@keyframes waveBtn {
 }

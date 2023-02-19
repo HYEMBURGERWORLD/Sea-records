@@ -15,6 +15,7 @@
     <title>기록의 바다에 오신 걸 환영합니다.</title>
   </head>
   <body>
+    <!--header-->
     <header class="header">
       <!-- 간단한 회원정보, 로그아웃 -->
       <nav class="main-nav">
@@ -22,16 +23,30 @@
           <li class="main-nav-info">
             <p><span class="user-name">사용자</span>님, 반가워요!</p>
           </li>
-          <li class="main-nav-info"><button id="logout">로그아웃</button></li>
+          <li class="main-nav-info">
+            <button class="btn btn--logout" id="logout">로그아웃</button>
+          </li>
         </ul>
       </nav>
 
       <!-- 헤더 메인 -->
       <section class="header-main-section">
         <div class="container">
+          <!-- wave -->
+          <div class="wave-container">
+            <div class="sun"></div>
+            <div class="wave wave--1"></div>
+            <div class="wave wave--2"></div>
+            <div class="wave wave--3"></div>
+            <div class="wave wave--4"></div>
+            <div class="wave wave--5"></div>
+            <div class="wave wave--6"></div>
+          </div>
+
           <!-- 메인 문구 -->
           <div class="section-stc">
             <p class="main-sentence">기록의 바다에 닻을 내리다｡</p>
+            <p class="sub-sentence">&mdash; 당신의 소중한 문장을 기록하세요</p>
           </div>
           <!-- tag 모음 -->
           <div class="tags">
@@ -52,54 +67,58 @@
           </div>
 
           <!-- 입력 form 숨긴 상태 -->
-          <!-- <p>닻을 내리시겠습니까? &darr;</p> -->
+          <div class="fold-msg-box">
+            <span class="fold-msg">⚓️ 닻을 내리시겠습니까?</span>
+          </div>
 
           <!-- 입력 form -->
-          <form class="record-form">
-            <div class="record-title-box">
-              <div class="title-box">
-                <label for="title">제목</label>
+          <div class="section-record-form">
+            <form class="record-form">
+              <div class="record-title-box">
+                <div class="title-box">
+                  <label for="title">제목</label>
+                  <input
+                    type="text"
+                    class="record-title"
+                    id="title"
+                    placeholder="얼음 고래"
+                  />
+                </div>
+
+                <div class="author-box">
+                  <label for="author">작가명</label>
+                  <input
+                    type="text"
+                    class="record-author"
+                    id="author"
+                    placeholder="츠지무라 미즈키"
+                  />
+                </div>
+              </div>
+              <div class="text-box">
+                <label for="text">당신을 울린 문장은 무엇인가요 ...</label>
+                <textarea
+                  class="record-text"
+                  id="text"
+                  cols="30"
+                  rows="10"
+                  placeholder="당신이 그려내는 빛은 어째서 그렇게 강하고 아름다운 것일까요?"
+                ></textarea>
+              </div>
+
+              <div class="tag-box">
+                <label for="recordTag">태그</label>
                 <input
                   type="text"
-                  class="record-title"
-                  id="title"
-                  placeholder="얼음 고래"
+                  class="record-tag"
+                  id="recordTag"
+                  placeholder="소설"
                 />
               </div>
 
-              <div class="author-box">
-                <label for="author">작가명</label>
-                <input
-                  type="text"
-                  class="record-author"
-                  id="author"
-                  placeholder="츠지무라 미즈키"
-                />
-              </div>
-            </div>
-            <div class="text-box">
-              <label for="text">당신을 울린 문장은 무엇인가요 ...</label>
-              <textarea
-                class="record-text"
-                id="text"
-                cols="30"
-                rows="10"
-                placeholder="당신이 그려내는 빛은 어째서 그렇게 강하고 아름다운 것일까요?"
-              ></textarea>
-            </div>
-
-            <div class="tag-box">
-              <label for="recordTag">태그</label>
-              <input
-                type="text"
-                class="record-tag"
-                id="recordTag"
-                placeholder="소설"
-              />
-            </div>
-
-            <button class="btn">닻을 내려 기록합니다</button>
-          </form>
+              <button class="btn btn--record">닻을 내려 기록합니다</button>
+            </form>
+          </div>
         </div>
       </section>
     </header>
@@ -112,32 +131,29 @@
           <p class="card-tag tag">tag</p>
           <p class="card-date">2023. 02. 15</p>
           <p class="card-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
-            consectetur natus magni eos, veritatis facere at aliquam reiciendis
-            iste deserunt. Temporibus, totam? Sit, omnis rerum magni quia earum
-            inventore rem.
+            행복한 가정은 모두 비슷해 보이지만 불행한 가정은 저마다의 이유가
+            있다.
           </p>
           <div class="card-title-author">
-            <span class="card-title">&mdash; title,</span>
-            <span class="card-author">author</span>
+            <span class="card-title">&mdash; 안나카레니나,</span>
+            <span class="card-author">레프 톨스토이</span>
           </div>
-          <p class="copy">복사</p>
+          <p class="copy"></p>
         </li>
 
         <!--카드 시작-->
         <li class="record-card">
           <!--임시-->
-          <p class="card-tag tag">tag</p>
+          <p class="card-tag tag">소설</p>
           <p class="card-date">2023. 02. 15</p>
           <p class="card-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
-            consectetur natus magni eos, veritatis facere at aliquam reiciendis
-            iste deserunt. Temporibus, totam? Sit, omnis rerum magni quia earum
-            inventore rem.
+            지금부터 하려는 이야기는 터무니없지만 꾸밈도 전혀 없는 이야기다. 이
+            이야기를 독자들이 믿어 주지도 않겠지만, 굳이 믿어 달라고 부탁하지도
+            않겠다.
           </p>
           <div class="card-title-author">
-            <span class="card-title">&mdash; title,</span>
-            <span class="card-author">author</span>
+            <span class="card-title">&mdash; 검은 고양이,</span>
+            <span class="card-author">에드거 앨런 포</span>
           </div>
         </li>
 
@@ -147,12 +163,12 @@
           <p class="card-tag tag">tag</p>
           <p class="card-date">2023. 02. 15</p>
           <p class="card-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
-            consectetur natus magni eos
+            그는 멕시코 만류에서 홀로 돛단배를 타고 고기잡이를 하는 노인이었다.
+            팔십하고도 나흘이 지나도록 그는 고기를 한 마리도 잡지 못했다.
           </p>
           <div class="card-title-author">
-            <span class="card-title">&mdash; title,</span>
-            <span class="card-author">author</span>
+            <span class="card-title">&mdash; 노인과 바다,</span>
+            <span class="card-author">어니스트 헤밍웨이</span>
           </div>
         </li>
 
@@ -162,13 +178,25 @@
           <p class="card-tag tag">tag</p>
           <p class="card-date">2023. 02. 15</p>
           <p class="card-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
-            consectetur natus magni eos, veritatis facere at aliquam reiciendis
-            iste deserunt.
+            어느 날 아침 그레고르 잠자가 편치 않은 꿈에서 깨어났을 때 그는
+            자신이 침대 속에서 한 마리의 엄청나게 큰 갑충으로 변해 있다는 걸
+            깨달았다.
           </p>
           <div class="card-title-author">
-            <span class="card-title">&mdash; title,</span>
-            <span class="card-author">author</span>
+            <span class="card-title">&mdash; 변신,</span>
+            <span class="card-author">프란츠 카프카</span>
+          </div>
+        </li>
+
+        <!--카드 시작-->
+        <li class="record-card">
+          <!--임시-->
+          <p class="card-tag tag">tag</p>
+          <p class="card-date">2023. 02. 15</p>
+          <p class="card-text">여신이여, 분노를 노래하소서.</p>
+          <div class="card-title-author">
+            <span class="card-title">&mdash; 일리아스,</span>
+            <span class="card-author">호메로스</span>
           </div>
         </li>
 
@@ -178,13 +206,13 @@
           <p class="card-tag tag">tag</p>
           <p class="card-date">2023. 02. 15</p>
           <p class="card-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
-            consectetur natus magni eos, veritatis facere at aliquam reiciendis
-            iste deserunt.
+            지금보다 더 어리고 민감하던 시절, 아버지가 충고를 한마디 했는데
+            아직도 그 말이 기억난다. "이 세상 사람이 다 너처럼 유리한 입장에
+            놓여 있지는 않다는 것을 말이다."
           </p>
           <div class="card-title-author">
-            <span class="card-title">&mdash; title,</span>
-            <span class="card-author">author</span>
+            <span class="card-title">&mdash; 위대한 개츠비,</span>
+            <span class="card-author">프랜시스 스콧 피츠제럴드</span>
           </div>
         </li>
 
@@ -193,27 +221,7 @@
           <!--임시-->
           <p class="card-tag tag">tag</p>
           <p class="card-date">2023. 02. 15</p>
-          <p class="card-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
-            consectetur natus magni eos
-          </p>
-          <div class="card-title-author">
-            <span class="card-title">&mdash; title,</span>
-            <span class="card-author">author</span>
-          </div>
-        </li>
-
-        <!--카드 시작-->
-        <li class="record-card">
-          <!--임시-->
-          <p class="card-tag tag">tag</p>
-          <p class="card-date">2023. 02. 15</p>
-          <p class="card-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
-            consectetur natus magni eos, veritatis facere at aliquam reiciendis
-            iste deserunt. Temporibus, totam? Sit, omnis rerum magni quia earum
-            inventore rem.
-          </p>
+          <p class="card-text">국경의 긴 터널을 빠져나오자, 설국이었다.</p>
           <div class="card-title-author">
             <span class="card-title">&mdash; title,</span>
             <span class="card-author">author</span>
@@ -223,6 +231,8 @@
       </ul>
     </main>
 
-    <footer></footer>
+    <footer>
+      <div class="container">footer</div>
+    </footer>
   </body>
 </html>

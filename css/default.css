@@ -27,6 +27,7 @@ font
 
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 body {
@@ -63,6 +64,17 @@ body {
 
 .grid--3-cols {
   grid-template-columns: repeat(3, 1fr);
+}
+
+.hidden {
+  display: none;
+}
+
+.icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  color: #bbb;
+  cursor: pointer;
 }
 
 button,
