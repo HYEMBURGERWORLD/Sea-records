@@ -27,7 +27,6 @@ font
 
 html {
   font-size: 62.5%;
-  overflow-x: hidden;
 }
 
 body {
@@ -37,64 +36,24 @@ body {
   color: #555;
 }
 
+a:link,
+a:active,
+a:visited,
+a:hover {
+  display: inline-block;
+  text-decoration: none;
+  color: #1d2133;
+}
+
 .container {
-  max-width: 120rem;
+  max-width: 85%;
   margin: 0 auto;
-  /* padding: 0 3.2rem; */
 }
 
 .btn {
-  background-color: #364fc7;
+  border: none;
+  cursor: pointer;
+
   color: #fff;
-
-  padding: 1.2rem 0;
-  border: none;
-
-  font-weight: 800;
-  cursor: pointer;
-}
-
-.grid {
-  display: grid;
-}
-
-.grid--2-cols {
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.grid--3-cols {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.hidden {
-  display: none;
-}
-
-.icon {
-  width: 2.4rem;
-  height: 2.4rem;
-  color: #bbb;
-  cursor: pointer;
-}
-
-button,
-input::placeholder,
-textarea::placeholder {
-  font-family: "Nanum Myeongjo", serif;
-}
-
-input,
-textarea {
-  padding: 0.8rem;
-  border: none;
-  display: block;
-  width: 100%;
-}
-
-textarea {
-  resize: none;
-}
-
-ul {
-  list-style: none;
+  background-color: #4b43a6;
 }

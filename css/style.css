@@ -1,30 +1,26 @@
 /*******************/
-/* header */
-/*******************/
-.header {
-  margin-bottom: 8rem;
-}
-
-/*******************/
-/* nav */
+/* header - nav */
 /*******************/
 .main-nav {
-  /* background-color: aliceblue; */
-  padding: 1.2rem 0;
+  background-color: #bac8ff;
+  color: #1d2133;
+
+  padding: 0.4rem 3.2rem;
 }
 
 .main-nav-list {
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
   align-items: center;
-  gap: 0.8em;
-}
 
-.main-nav-info {
+  height: 3.2rem;
+
+  list-style: none;
   font-size: 1.4rem;
 }
 
-.user-name {
+.logo {
+  font-size: 2rem;
   font-weight: 800;
 }
 
@@ -33,185 +29,196 @@
 }
 
 /*******************/
-/* 메인 문구 */
+/* header - 메인 문구 */
 /*******************/
-.header-main-section {
-  padding: 12.8rem 6.4rem;
+.section-header {
+  padding: 9.6rem 0;
+  margin: 6.4rem 0;
 }
 
-.section-stc {
-  /* background-color: #91a7ff; */
-  position: relative;
-  margin: 3.2rem 0 9.6rem 0;
+.sentence-box {
+  margin-top: 1.4rem;
+  color: #1d2133;
 }
 
 .main-sentence {
-  font-size: 5.2rem;
-  letter-spacing: -0.4rem;
-  color: #1d2133;
+  font-size: 6.2rem;
   font-weight: 800;
+  letter-spacing: -5px;
 }
 
 .sub-sentence {
-  font-size: 3rem;
-  letter-spacing: -0.2rem;
-  margin-top: 0.8rem;
-  color: #1d2133; /*임시*/
+  font-size: 4.4rem;
+  letter-spacing: -5px;
+}
+
+/*******************/
+/* 기록 섹션 */
+/*******************/
+.section-record {
+  padding: 9.6rem 0;
+  margin: 6.4rem 0;
 }
 
 /*******************/
 /* 태그 */
 /*******************/
-.tags {
-  max-width: 50%;
-  margin: 0 auto 2.4rem auto;
-  padding: 4.8rem 0;
-
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 1.2rem;
-}
-
-.tag {
-  font-size: 1.4rem;
-  font-weight: 700;
-
-  background-color: #edf2ff;
-  color: #1d2133;
-  padding: 0.4rem 1.6rem;
-  border-radius: 10px;
-
-  cursor: pointer;
-
-  transition: all 0.3s;
-}
-
-.tag:hover {
-  background-color: #91a7ff;
-  font-weight: 800;
-}
-
-/*******************/
-/* 기록 입력 폼 */
-/*******************/
-.fold-msg-box {
-  text-align: center;
-  margin: 4.8rem 0;
-}
-
-.fold-msg {
-  font-size: 1.6rem;
-  font-weight: 800;
-  cursor: pointer;
-  background-color: #fff;
-
-  display: inline-block;
-  padding: 1.2rem 2.4rem;
-  border-radius: 20px;
-
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-}
-
-.section-record-form {
-  max-width: 50%;
-  background-color: #fff;
-  border-radius: 5px;
-  padding: 3.2rem 3.2rem;
-  margin: 4.8rem auto;
-  overflow: hidden;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-}
-
-.record-form {
+.tag-box {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 50%;
+  margin: 0 auto;
+  padding: 6.4rem 0;
+  gap: 1.4rem;
+}
+
+.tag-box--title {
+  font-size: 1.6rem;
+  letter-spacing: -1px;
+  font-style: italic;
+}
+
+.tags {
+  list-style: none;
+  /* padding: 6.4rem 0; */
+  /* margin: 4.8rem 0; */
+
+  display: flex;
+  justify-content: center;
   gap: 0.8rem;
 }
 
-.record-form .btn {
-  border-radius: 9px;
-  width: 100%;
+.tag {
+  color: #1d2133;
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding: 0.4rem 0.8rem;
+  background-color: #bac8ff;
+  border-radius: 15px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all 0.7s ease-in;
+}
+
+.tag:hover {
+  background-color: #4b43a6;
+  color: #fff;
 }
 
 /*******************/
-/* 기록 출력 카드 뭉치 */
+/* 입력 폼 */
 /*******************/
-.record-container {
-  max-width: 80%;
-  margin: 6.4rem auto 12.8rem auto;
-  background-color: #364fc7;
-  border-radius: 5px;
+.record-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 0.4rem;
+  max-width: 50%;
+  margin: 4.8rem auto;
+}
 
-  padding: 3.2rem;
-  gap: 2.4rem;
-  box-shadow: rgba(0, 0, 0, 0.03) 0px 10px 50px;
+.record-text-label,
+.record-tag-label,
+.record-text,
+.record-tag,
+.btn--record {
+  grid-column: 1 / -1;
+}
+
+.record-form label {
+  color: #1d2133;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-top: 0.8rem;
+}
+
+.record-form input {
+  border: none;
+  padding: 0.4rem;
+}
+
+.record-form textarea {
+  resize: none;
+  border: none;
+  padding: 0.4rem;
+}
+
+.record-form input::placeholder,
+.record-form textarea::placeholder {
+  font-family: "Nanum Myeongjo", serif;
+  letter-spacing: -0.5px;
+}
+
+.btn--record {
+  font-family: "Nanum Myeongjo", serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  padding: 1.4rem 0;
+  transition: all 2s ease;
+}
+
+.btn--record:hover {
+  /* 색상 변경 */
+}
+
+/*******************/
+/* 출력 */
+/*******************/
+.record-cards {
+  background-color: #1d2133;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.4rem;
+  padding: 2.4rem;
 }
 
 .record-card {
   background-color: #fff;
-  border-radius: 5px;
-  padding: 3.2rem 3.2rem 8rem 3.2rem;
-  font-size: 2.4rem;
-  line-height: 1.1;
-  gap: 1.2rem;
 
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
 
-  box-shadow: rgba(0, 0, 0, 0.2) 0px -50px 36px -40px inset;
-
+  padding: 4.8rem 1.2rem;
   cursor: pointer;
-  transition: all 0.8s;
-}
-
-.record-card:hover {
-  transform: scale(1.03);
-  box-shadow: none;
 }
 
 .card-tag {
-  width: 30%;
-  text-align: center;
+  display: inline-block;
+  color: #1d2133;
+  background-color: #bac8ff;
+
+  border-radius: 15px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding: 0.4rem 0.8rem;
+
+  cursor: pointer;
 }
 
 .card-date {
-  font-size: 1.4rem;
-}
-
-.card-title-author {
-  text-align: end;
-  font-size: 1.4rem;
-}
-
-.card-title {
-  font-weight: 700;
-  font-style: italic;
 }
 
 .card-text {
   font-size: 2.4rem;
-  letter-spacing: -0.05rem;
-  padding: 1.6rem 0;
+  letter-spacing: -1.5px;
 }
 
-.copy {
-  font-size: 1.2rem;
+.card-info {
+  font-size: 1.8rem;
+  font-style: italic;
   text-align: end;
-  color: #555;
-  transition: all 0.5s;
-}
-
-.copy:hover {
-  color: #333;
 }
 
 /*******************/
-/* animation */
+/* wave animation */
 /*******************/
-.wave-container {
+.wave-box {
   position: relative;
   margin: 0;
   padding: 0;
@@ -295,10 +302,6 @@
   animation: sun 6s infinite ease-in;
 }
 
-.btn--record:hover {
-  animation: ;
-}
-
 @keyframes wave {
   100% {
     transform: rotate(360deg);
@@ -310,7 +313,4 @@
     width: 4.2rem;
     height: 4.2rem;
   }
-}
-
-@keyframes waveBtn {
 }
