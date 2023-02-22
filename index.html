@@ -20,7 +20,7 @@
     <!--header-->
     <header>
       <!--nav-->
-      <nav class="main-nav">
+      <nav class="main-nav" id="top">
         <ul class="main-nav-list">
           <li>
             <a href="#" class="logo">문장의바다</a>
@@ -108,12 +108,14 @@
               class="record-title"
               id="recordTitle"
               placeholder="얼음고래"
+              required
             />
             <input
               type="text"
               class="record-author"
               id="recordAuthor"
               placeholder="츠지무라 미즈키"
+              required
             />
             <!--내용작성-->
             <label for="recordText" class="record-text-label"
@@ -125,6 +127,7 @@
               cols="30"
               rows="10"
               placeholder="당신이 그려내는 빛은 어째서 그렇게 강하고 아름다운 것일까요?"
+              required
             ></textarea>
             <!--태그-->
             <label for="recordTag">태그</label>
@@ -205,7 +208,7 @@
       </section>
     </main>
 
-    <div class="btn--up">
+    <a href="#top" class="btn--up">
       <div class="up--bg">
         <div class="up--wave uw--1"></div>
         <div class="up--wave uw--2"></div>
@@ -215,6 +218,6 @@
           <i class="tag--icon ph-anchor"></i>
         </div>
       </div>
-    </div>
+    </a>
   </body>
 </html>

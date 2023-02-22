@@ -22,6 +22,7 @@
 .logo {
   font-size: 2rem;
   font-weight: 800;
+  color: #1d2133;
 }
 
 .btn--logout {
@@ -350,6 +351,7 @@
 /*******************/
 
 .btn--up {
+  display: inline-block;
   position: fixed;
   bottom: 3rem;
   right: 3rem;
@@ -394,12 +396,13 @@
 }
 
 .up--anchor {
+  display: block;
   position: absolute;
   color: #fff;
   font-size: 1.8rem;
   width: 100%;
   height: 100%;
-  top: 0%;
+  top: 30%;
   left: 10%;
   transform: rotate(30deg);
   transition: all 1s ease-out;
