@@ -46,7 +46,7 @@ a:hover {
 }
 
 .container {
-  max-width: 85%;
+  max-width: 125rem;
   margin: 0 auto;
 }
 
@@ -56,4 +56,9 @@ a:hover {
 
   color: #fff;
   background-color: #4b43a6;
+}
+
+.grid {
+  display: grid;
+  align-items: center;
 }

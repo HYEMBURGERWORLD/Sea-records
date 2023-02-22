@@ -1,0 +1,116 @@
+/*
+
+10px 적용 x
+(변경없다는 전제하에) 16px
+
+*/
+
+@media (max-width: 71rem) {
+  .record-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 52rem) {
+  .main-sentence {
+    font-size: 5.2rem;
+  }
+  .sub-sentence {
+    font-size: 3rem;
+  }
+
+  .record-form {
+    max-width: 70%;
+  }
+
+  .record-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .wave-box {
+    width: 18rem;
+    height: 18rem;
+  }
+
+  .sun {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  @keyframes sun {
+    100% {
+      width: 5.2rem;
+      height: 5.2rem;
+    }
+  }
+}
+
+@media (max-width: 35rem) {
+  .section-header {
+    padding-top: 2.4rem;
+    padding-bottom: 0;
+  }
+
+  .main-sentence {
+    font-size: 4.4rem;
+  }
+  .sub-sentence {
+    font-size: 2.4rem;
+  }
+
+  .record-form {
+    max-width: 85%;
+  }
+
+  .btn--up {
+    opacity: 0.5;
+  }
+  .wave-box {
+    width: 15rem;
+    height: 15rem;
+  }
+
+  .sun {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  @keyframes sun {
+    100% {
+      width: 4.2rem;
+      height: 4.2rem;
+    }
+  }
+}
+
+@media (max-width: 29rem) {
+  .main-sentence {
+    font-size: 3.6rem;
+  }
+  .sub-sentence {
+    font-size: 2rem;
+    letter-spacing: -1px;
+  }
+}
+
+@media (max-width: 24rem) {
+  .main-sentence {
+    font-size: 3rem;
+  }
+  .sub-sentence {
+    font-size: 1.8rem;
+    letter-spacing: -1px;
+  }
+
+  .tag-box--title {
+    font-size: 1.4rem;
+  }
+
+  .card-text {
+    font-size: 2rem;
+  }
+
+  .card-info-box {
+    font-size: 1.2rem;
+  }
+}
