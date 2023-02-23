@@ -62,3 +62,7 @@ a:hover {
   display: grid;
   align-items: center;
 }
+
+.hidden {
+  display: none;
+}

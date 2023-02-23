@@ -248,6 +248,27 @@
   margin-right: 1.6rem;
 }
 
+.card-btn-box {
+  align-self: flex-end;
+  display: flex;
+  gap: 0.4rem;
+}
+
+.btn--card {
+  border: none;
+  background-color: transparent;
+  font-size: 1.2rem;
+  font-family: "Nanum Myeongjo", serif;
+
+  color: #666;
+  cursor: pointer;
+  transition: all 2s;
+}
+
+.btn--card:hover {
+  color: #3c3685;
+}
+
 /*******************/
 /* wave animation */
 /*******************/
