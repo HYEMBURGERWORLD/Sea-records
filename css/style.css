@@ -202,7 +202,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 2.4rem;
+  gap: 1.2rem;
 
   padding: 6.4rem 3.2rem;
   transition: all 2s;
@@ -212,12 +212,6 @@
 .record-card:hover {
   transform: scale(1.03);
   box-shadow: none;
-}
-
-.card-tag-date-box {
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
 }
 
 .card-tag {
@@ -241,11 +235,10 @@
   line-height: 1.4;
 }
 
-.card-info-box {
+.card-info {
   font-size: 1.6rem;
   font-style: italic;
   text-align: end;
-  margin-right: 1.6rem;
 }
 
 .card-btn-box {

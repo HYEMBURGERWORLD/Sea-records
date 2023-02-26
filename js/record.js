@@ -1,8 +1,47 @@
 const recordForm = document.querySelector("#recordForm");
-
-// 저장
 let records = [];
 
+// 시작
+const getRecord = JSON.parse(localStorage.getItem("records"));
+if (getRecord !== null) {
+  records = getRecord;
+  records.forEach(printRecord);
+  printTag();
+}
+
+// tag 출력
+function printTag() {
+  console.log("실행중");
+  // 1. tag 정보 불러오기
+  let tag = [];
+
+  getRecord.forEach((item) => {
+    tag.push(item.tag);
+  });
+
+  // 2. node 추가
+  new Set(tag).forEach((item) => {
+    console.log(item);
+    const tags = document.querySelector(".tags");
+    const li = document.createElement("li");
+    li.classList.add("tag");
+
+    // 아이콘
+    const icon = document.createElement("i");
+    icon.classList.add("tag--icon");
+    icon.classList.add("ph-anchor");
+    li.appendChild(icon);
+
+    // tag name
+    const span = document.createElement("span");
+    span.classList.add("tag--text");
+    span.innerText = item;
+    li.appendChild(span);
+    tags.appendChild(li);
+  });
+}
+
+// 저장
 function saveRecord(e) {
   e.preventDefault();
 
@@ -34,16 +73,73 @@ function saveRecord(e) {
 
 // 출력
 function printRecord(record) {
-  const card = document.querySelector(".c1").childNodes;
-  console.log(record.text);
+  const cards = document.querySelector(".record-cards");
+  const $fragment = document.createDocumentFragment();
+  const li = document.createElement("li");
+  const div = document.createElement("div");
+
+  [record.date, record.text, record.title].forEach((item) => {
+    const span = document.createElement("span");
+    li.classList.add("record-card");
+
+    // date
+    if (item === record.date) {
+      span.innerText = item;
+      span.classList.add("card-date");
+      li.appendChild(span);
+    }
+
+    // text
+    else if (item === record.text) {
+      span.innerText = item;
+      span.classList.add("card-text");
+      li.appendChild(span);
+    }
+
+    // info
+    else if (item === record.title) {
+      span.classList.add("card-info");
+      span.innerText = `—${record.title}, ${record.author}`;
+      li.appendChild(span);
+    }
+  });
+
+  // 버튼
+  div.classList.add("card-btn-box");
+  li.appendChild(div);
+  ["수정", "삭제"].forEach((text) => {
+    const button = document.createElement("button");
+    button.classList.add("btn--card");
+
+    const textNode = document.createTextNode(text);
+    button.appendChild(textNode);
+
+    text === "수정"
+      ? button.classList.add("btn--mod")
+      : button.classList.add("btn--del");
+
+    div.appendChild(button);
+
+    button.addEventListener("click", (e) => {
+      button.classList.contains("btn--mod") ? modRecord(e) : delRecord(e);
+    });
+  });
+
+  // 추가
+  $fragment.appendChild(li);
+  // 완성
+  cards.appendChild($fragment);
 }
 
 // 수정
-const modBtn = document.querySelector(".btn--mod");
-function modRecord(event) {}
+function modRecord(event) {
+  // form 창 이동, 기록 -> 수정으로 버튼 메시지 변경
+  // 수정할 record 출력
+  // 텍스트 수정 완료
+  // 로컬스토리지 수정
+}
 
 // 삭제
-const delBtn = document.querySelector(".btn--del");
 function delRecord(event) {
   alert("기록을 삭제하시겠습니까?");
   const li = event.target.parentElement.parentElement;
@@ -53,5 +149,3 @@ function delRecord(event) {
 
 // 이벤트 리스너
 recordForm.addEventListener("submit", saveRecord);
-modBtn.addEventListener("click", modRecord);
-delBtn.addEventListener("click", delRecord);
