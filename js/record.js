@@ -1,6 +1,12 @@
 const recordForm = document.querySelector("#recordForm");
 let records = [];
 
+// record form
+const text = document.querySelector("#recordText");
+const title = document.querySelector("#recordTitle");
+const author = document.querySelector("#recordAuthor");
+const tag = document.querySelector("#recordTag");
+
 // 시작
 const getRecord = JSON.parse(localStorage.getItem("records"));
 if (getRecord !== null) {
@@ -45,10 +51,6 @@ function printTag() {
 function saveRecord(e) {
   e.preventDefault();
 
-  const text = document.querySelector("#recordText");
-  const title = document.querySelector("#recordTitle");
-  const author = document.querySelector("#recordAuthor");
-  const tag = document.querySelector("#recordTag");
   const date = new Date();
 
   const recordObj = {
@@ -78,7 +80,7 @@ function printRecord(record) {
   const li = document.createElement("li");
   const div = document.createElement("div");
 
-  [record.date, record.text, record.title].forEach((item) => {
+  [record.date, record.text, record.title, record.id].forEach((item) => {
     const span = document.createElement("span");
     li.classList.add("record-card");
 
@@ -101,6 +103,11 @@ function printRecord(record) {
       span.classList.add("card-info");
       span.innerText = `—${record.title}, ${record.author}`;
       li.appendChild(span);
+    }
+
+    // id
+    else if (item === record.id) {
+      li.setAttribute("id", item);
     }
   });
 
@@ -134,10 +141,27 @@ function printRecord(record) {
 // 수정
 function modRecord(event) {
   // form 창 이동, 기록 -> 수정으로 버튼 메시지 변경
+  const recordBtn = document.querySelector("#recordBtn");
+  const recordModBtn = document.querySelector("#recordModBtn");
+
+  // recordBtn.classList.add("hidden");
+  // recordModBtn.classList.remove("hidden");
+
   // 수정할 record 출력
+  const id = event.target.parentElement.parentElement.id;
+  const target = records.filter((item) => item.id === Number(id));
+
+  text.value = target[0].text;
+  title.value = target[0].title;
+  author.value = target[0].author;
+  tag.value = target[0].tag;
+
   // 텍스트 수정 완료
   // 로컬스토리지 수정
+  recordModBtn.addEventListener("click", modStorage);
 }
+
+function modStorage() {}
 
 // 삭제
 function delRecord(event) {
