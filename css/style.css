@@ -27,6 +27,7 @@
 
 .btn--logout {
   padding: 0.4rem 0.8rem;
+  background-color: #4b43a6;
 }
 
 /*******************/
@@ -144,7 +145,7 @@
   margin-top: 0.8rem;
 }
 
-.record-form input {
+.record-form .record-input {
   border: none;
   padding: 0.4rem;
 }
@@ -161,18 +162,27 @@
   letter-spacing: -0.5px;
 }
 
+.record-btn-box {
+  grid-column: 1 / -1;
+  padding: 1.6rem 0;
+
+  background-color: #4b43a6;
+  transition: all 2s ease;
+}
+
+.record-btn-box:hover {
+  /* 색상 변경 */
+  background-color: #3c3685;
+}
+
 .btn--record {
   font-family: "Nanum Myeongjo", serif;
   font-size: 1.6rem;
   font-weight: 700;
-  padding: 1.4rem 0;
-  transition: all 2s ease;
-  background-color: #5d56af;
-}
 
-.btn--record:hover {
-  /* 색상 변경 */
-  background-color: #4b43a6;
+  background-color: inherit;
+  width: 100%;
+  height: 100%;
 }
 
 /*******************/

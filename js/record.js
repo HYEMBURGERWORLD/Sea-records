@@ -6,7 +6,9 @@ const text = document.querySelector("#recordText");
 const title = document.querySelector("#recordTitle");
 const author = document.querySelector("#recordAuthor");
 const tag = document.querySelector("#recordTag");
-const hiddenId = document.querySelector("#recordId");
+const card = document.querySelectorAll(".record-card");
+
+console.log(card.id);
 
 // 시작
 const getRecord = JSON.parse(localStorage.getItem("records"));
@@ -156,17 +158,17 @@ function modRecord(event) {
   title.value = target[0].title;
   author.value = target[0].author;
   tag.value = target[0].tag;
-  hiddenId.value = target[0].id;
 
   // 텍스트 수정 완료
   // 로컬스토리지 수정
-  recordModBtn.addEventListener("click", modStorage);
+  recordModBtn.addEventListener("click", function () {
+    modStorage(target[0].id);
+  });
 }
 
-function modStorage() {
-  const id = hiddenId.innerText;
+function modStorage(recordId) {
   records.forEach((item) => {
-    if (item.id === Number(id)) {
+    if (item.id === recordId) {
       item.text = text.value;
       item.title = title.value;
       item.author = author.value;
@@ -174,15 +176,16 @@ function modStorage() {
     }
   });
 
+  // 버튼 변경
   const recordBtn = document.querySelector("#recordBtn");
   const recordModBtn = document.querySelector("#recordModBtn");
   recordBtn.classList.remove("hidden");
   recordModBtn.classList.add("hidden");
 
   localStorage.setItem("records", JSON.stringify(records));
-  console.log("수정성공");
 
-  const li = document.getElementById(`${id}`);
+  let arr = [text, title, author, tag];
+  arr.forEach((i) => (i.value = ""));
 }
 
 // 삭제

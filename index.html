@@ -76,7 +76,7 @@
             <label for="recordAuthor">작자명</label>
             <input
               type="text"
-              class="record-title"
+              class="record-input record-title"
               id="recordTitle"
               placeholder="얼음고래"
               autocomplete="off"
@@ -84,7 +84,7 @@
             />
             <input
               type="text"
-              class="record-author"
+              class="record-input record-author"
               id="recordAuthor"
               placeholder="츠지무라 미즈키"
               autocomplete="off"
@@ -107,19 +107,23 @@
             <label for="recordTag">태그</label>
             <input
               type="text"
-              class="record-tag"
+              class="record-input record-tag"
               id="recordTag"
               placeholder="소설"
             />
-            <!-- 히든 id -->
-            <span class="hidden" id="recordId"></span>
+
             <!--작성폼 버튼-->
-            <button class="btn btn--record" id="recordBtn">
-              닻을 내려 기록합니다
-            </button>
-            <button class="btn btn--record hidden" id="recordModBtn">
-              닻을 올려 수정합니다
-            </button>
+            <div class="record-btn-box">
+              <button class="btn btn--record" id="recordBtn">
+                닻을 내려 기록합니다
+              </button>
+              <input
+                type="button"
+                class="btn btn--record hidden"
+                id="recordModBtn"
+                value="닻을 올려 수정합니다"
+              />
+            </div>
           </form>
         </div>
       </section>
