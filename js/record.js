@@ -8,14 +8,16 @@ const author = document.querySelector("#recordAuthor");
 const tag = document.querySelector("#recordTag");
 const card = document.querySelectorAll(".record-card");
 
-console.log(card.id);
-
 // 시작
 const getRecord = JSON.parse(localStorage.getItem("records"));
+const empty = document.querySelector(".record-empty");
 if (getRecord !== null) {
+  empty.classList.add("hidden");
   records = getRecord;
   records.forEach(printRecord);
   printTag();
+} else {
+  empty.classList.remove("hidden");
 }
 
 // tag 출력
@@ -30,29 +32,43 @@ function printTag() {
 
   // 2. node 추가
   new Set(tag).forEach((item) => {
-    console.log(item);
-    const tags = document.querySelector(".tags");
-    const li = document.createElement("li");
-    li.classList.add("tag");
+    if (item === "") {
+      return;
+    } else {
+      const tags = document.querySelector(".tags");
+      const li = document.createElement("li");
+      li.classList.add("tag");
 
-    // 아이콘
-    const icon = document.createElement("i");
-    icon.classList.add("tag--icon");
-    icon.classList.add("ph-anchor");
-    li.appendChild(icon);
+      // 아이콘
+      const icon = document.createElement("i");
+      icon.classList.add("tag--icon");
+      icon.classList.add("ph-anchor");
+      li.appendChild(icon);
 
-    // tag name
-    const span = document.createElement("span");
-    span.classList.add("tag--text");
-    span.innerText = item;
-    li.appendChild(span);
-    tags.appendChild(li);
+      // tag name
+      const span = document.createElement("span");
+      span.classList.add("tag--text");
+      span.innerText = item;
+      li.appendChild(span);
+      tags.appendChild(li);
+
+      li.addEventListener("click", function () {
+        findTag(item);
+      });
+    }
   });
+}
+
+// tag　찾기
+function findTag(v) {
+  records = records.filter((item) => item.tag === v);
+  records.forEach(printRecord);
 }
 
 // 저장
 function saveRecord(e) {
   e.preventDefault();
+  empty.classList.remove("hidden");
 
   const date = new Date();
 
@@ -71,8 +87,8 @@ function saveRecord(e) {
   localStorage.setItem("records", JSON.stringify(records));
   console.log("저장 성공");
 
-  let arr = [text, title, author, tag];
-  arr.forEach((i) => (i.value = ""));
+  let reset = [text, title, author, tag];
+  reset.forEach((i) => (i.value = ""));
   printRecord(recordObj);
 }
 
@@ -162,6 +178,7 @@ function modRecord(event) {
   // 텍스트 수정 완료
   // 로컬스토리지 수정
   recordModBtn.addEventListener("click", function () {
+    confirm("수정하시겠습니까?");
     modStorage(target[0].id);
   });
 }
@@ -184,13 +201,14 @@ function modStorage(recordId) {
 
   localStorage.setItem("records", JSON.stringify(records));
 
-  let arr = [text, title, author, tag];
-  arr.forEach((i) => (i.value = ""));
+  let reset = [text, title, author, tag];
+  reset.forEach((i) => (i.value = ""));
+  location.reload();
 }
 
 // 삭제
 function delRecord(event) {
-  alert("기록을 삭제하시겠습니까?");
+  confirm("기록을 삭제하시겠습니까?");
   const li = event.target.parentElement.parentElement;
   li.remove();
   records = records.filter((item) => item.id !== Number(li.id));
