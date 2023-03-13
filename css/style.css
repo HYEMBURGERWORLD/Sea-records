@@ -120,13 +120,28 @@
 /*******************/
 /* 입력 폼 */
 /*******************/
+
+.user-voice {
+  display: flex;
+  font-size: 1.4rem;
+  align-items: center;
+  cursor: pointer;
+  grid-column: 1 / -1;
+  gap: 0.4rem;
+  margin-bottom: 0.4rem;
+}
+
+.user-voice-icon {
+}
+
 .record-form {
   display: grid;
   grid-template-columns: 1fr 1fr;
   row-gap: 0.4rem;
   max-width: 50%;
   margin: 4.8rem auto;
-  border-radius: 9px;
+  border-bottom-left-radius: 9px;
+  border-bottom-right-radius: 9px;
   overflow: hidden;
 }
 
