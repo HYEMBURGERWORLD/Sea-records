@@ -60,9 +60,11 @@ function printTag() {
 }
 
 // tag　찾기
+
+// 수정, 추가해야하는 부분 -> 원래 있던 레코드를 가리고, 새로 보여주어야 함
 function findTag(v) {
-  records = records.filter((item) => item.tag === v);
-  records.forEach(printRecord);
+  let tags = records.filter((item) => item.tag === v);
+  tags.forEach(printRecord);
 }
 
 // 저장
@@ -71,6 +73,13 @@ function saveRecord(e) {
   empty.classList.remove("hidden");
 
   const date = new Date();
+
+  if (title.value === "") {
+    title.value = "불명";
+  }
+  if (author.value === "") {
+    author.value = "작자미상";
+  }
 
   const recordObj = {
     text: text.value,
