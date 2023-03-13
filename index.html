@@ -29,7 +29,7 @@
             <span class="user-name" id="userName"
               ><strong>사용자</strong>님, 반가워요!</span
             >
-            <button class="btn btn--logout" id="logout">로그아웃</button>
+            <!-- <button class="btn btn--logout" id="logout">로그아웃</button> -->
           </li>
         </ul>
       </nav>
@@ -65,12 +65,23 @@
           <div class="tag-box">
             <span class="tag-box--title">어떤 종류의 닻을 찾으시나요?</span>
             <ul class="tags">
-              <!-- tag 출력-->
+              <li class="tag">
+                <i class="tag--icon ph-anchor"></i>
+                <span class="tag--text">모든 닻을 확인합니다</span>
+              </li>
+              <li class="tag">
+                <i class="tag--icon ph-anchor"></i>
+                <span class="tag--text">불명</span>
+              </li>
             </ul>
           </div>
 
           <!-- 2. 입력 폼 -->
           <form class="record-form" id="recordForm">
+            <div class="user-voice">
+              <i class="user-voice-icon ph ph-microphone"></i>
+              <span class="user-voice-span">목소리로 기록하시겠어요?</span>
+            </div>
             <!-- 제목, 저자 -->
             <label for="recordTitle">제목</label>
             <label for="recordAuthor">작자명</label>
@@ -80,7 +91,6 @@
               id="recordTitle"
               placeholder="얼음고래"
               autocomplete="off"
-              required
             />
             <input
               type="text"
@@ -88,7 +98,6 @@
               id="recordAuthor"
               placeholder="츠지무라 미즈키"
               autocomplete="off"
-              required
             />
             <!--내용작성-->
             <label for="recordText" class="record-text-label"
@@ -157,5 +166,6 @@
 
     <!--js-->
     <script type="text/javascript" src="js/record.js"></script>
+    <script type="text/javascript" src="js/speech.js"></script>
   </body>
 </html>
